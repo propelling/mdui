@@ -19,7 +19,7 @@ const banner = `
 `.trim();
 
 export default [
-  // 编译测 ES6 模块化文件
+  // Compile and test ES6 modules
   {
     input: './src/index.ts',
     output: {
@@ -33,7 +33,7 @@ export default [
     plugins: [resolve(), typescript(tsconfig.compilerOptions)],
   },
 
-  // 编译成 umd 文件
+  // Compile UMD modules
   {
     input: './src/index.ts',
     output: {
@@ -56,7 +56,7 @@ export default [
     ],
   },
 
-  // 编译成 umd 文件，并压缩
+  // Compile and minify UMD modules
   {
     input: './src/index.ts',
     output: {
